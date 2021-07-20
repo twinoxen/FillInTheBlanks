@@ -1,4 +1,4 @@
-import * as main from '../../src/main'
+import * as main from '../../../src/main'
 
 describe('main.ts', () => {
   test('does pineapple belong on pizza?', () => {
