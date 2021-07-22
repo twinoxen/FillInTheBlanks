@@ -4,13 +4,13 @@ import * as myStrFuncs from '../../../src/string';
 // reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 describe('myStrFuncs.ts string functions', () => {
   it('returns a string of a pizza topping', () => {
-    // expect(myStrFuncs.getPizzaTopping()).toBe('pepperoni');
+     expect(myStrFuncs.getPizzaTopping()).toBe('pepperoni');
   });
 
   it('console logs a string about pizza toppings', () => {
     const consoleSpy = jest.spyOn(console, 'log');
 
-    // myStrFuncs.log(myStrFuncs.getPizzaTopping()) // *note the use of an argument
+     myStrFuncs.log(myStrFuncs.getPizzaTopping()) // *note the use of an argument
 
     expect(consoleSpy).toHaveBeenCalledWith('pepperoni');
   });
@@ -18,7 +18,7 @@ describe('myStrFuncs.ts string functions', () => {
   it('logs a loud topping', () => {
     const consoleSpy = jest.spyOn(console, 'log');
 
-    // myStrFuncs.log(myStrFuncs.yell(myStrFuncs.getPizzaTopping()))
+     myStrFuncs.log(myStrFuncs.yell(myStrFuncs.getPizzaTopping()))
 
     expect(consoleSpy).toHaveBeenCalledWith('PEPPERONI');
   });
@@ -26,7 +26,7 @@ describe('myStrFuncs.ts string functions', () => {
   it('logs a loud topping with some fluff(whitespace)', () => {
     const consoleSpy = jest.spyOn(console, 'log');
 
-    // myStrFuncs.log(myStrFuncs.addWhiteSpace(myStrFuncs.yell(myStrFuncs.getPizzaTopping())))
+     myStrFuncs.log(myStrFuncs.addWhiteSpace(myStrFuncs.yell(myStrFuncs.getPizzaTopping())))
 
     expect(consoleSpy).toHaveBeenCalledWith(' PEPPERONI ');
   });
