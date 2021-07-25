@@ -35,7 +35,7 @@ describe('myStrFuncs.ts string functions', () => {
     // hint: use the trim function
     const consoleSpy = jest.spyOn(console, 'log');
 
-    // myStrFuncs.log(myStrFuncs.removeWhiteSpace(myStrFuncs.addWhiteSpace(myStrFuncs.yell(myStrFuncs.getPizzaTopping()))))
+     myStrFuncs.log(myStrFuncs.removeWhiteSpace(myStrFuncs.addWhiteSpace(myStrFuncs.yell(myStrFuncs.getPizzaTopping()))))
 
     expect(consoleSpy).toHaveBeenCalledWith('PEPPERONI');
   });
@@ -43,16 +43,16 @@ describe('myStrFuncs.ts string functions', () => {
   it('replaces a pepperoni for ham', () => {
     const consoleSpy = jest.spyOn(console, 'log');
 
-    // main(myStrFuncs.switchToppings(myStrFuncs.getPizzaTopping(), 'ham'))
+     myStrFuncs.log(myStrFuncs.switchToppings(myStrFuncs.getPizzaTopping(), 'ham'))
 
     expect(consoleSpy).toHaveBeenCalledWith('ham');
   });
 
   test('does pepperoni have pepper?', () => {
     // hint: use includes function
-    
-    // expect(myStrFuncs.has('pepper', myStrFuncs.getPizzaTopping())).toBe(true);
+         expect(myStrFuncs.has('pepper', myStrFuncs.getPizzaTopping())).toBe(true);
   })
+
 
   // Read documentation for the following native string functions and write me a test for each
   // indexOf
