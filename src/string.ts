@@ -1,4 +1,3 @@
-import { createEmitAndSemanticDiagnosticsBuilderProgram } from "typescript";
 
 export function log(str) {
   console.log(str);
