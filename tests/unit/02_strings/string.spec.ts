@@ -55,8 +55,14 @@ describe('myStrFuncs.ts string functions', () => {
 
 
   // Read documentation for the following native string functions and write me a test for each
-  
+
   // indexOf
+  
+  test('location of the string in the paragraph', () => {
+
+      expect(myStrFuncs.indexer('The quick brown fox jumps over the lazy dog','brown')).toBe(10)
+  })
+  
   // match
   // slice
   // split
