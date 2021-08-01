@@ -1,3 +1,5 @@
+import { createRegularExpressionLiteral } from "typescript";
+
 export function log(str) {
   console.log(str);
 }
@@ -29,3 +31,17 @@ export function has(stringimlookingfor, stringimsearching) {
 export function indexer(paragraph, paraPart) {
   return paragraph.indexOf(paraPart);
 }
+
+export function matcher(paragraph, paraPart) {
+  const myReg = new RegExp(paraPart, "gi");
+  return paragraph.match(myReg);
+}
+
+export function slicer(paragraph:string, paraStart, paraEnd) {
+  return paragraph.slice(paraStart, paraEnd)
+}
+
+export function splitter(paragraph:string, splitspot) {
+  return paragraph.split(splitspot)
+}
+  
