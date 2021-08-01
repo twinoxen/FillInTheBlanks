@@ -1,5 +1,3 @@
-import { createRegularExpressionLiteral } from "typescript";
-
 export function log(str) {
   console.log(str);
 }
