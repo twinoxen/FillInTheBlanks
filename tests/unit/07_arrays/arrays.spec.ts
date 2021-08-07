@@ -191,7 +191,6 @@ describe('arrays', () => {
 
     // expect().toEqual(['Sir REGINALD', 'Sir BERNARD', 'Sir FRANCO', 'Sir JAMES'])
   })
-  // chaining
   
   /* =============== */
   /*     Homework    */
