@@ -1,3 +1,5 @@
+// This test is self contained and does not require external files / modules
+
 // JavaScript arrays are used to store multiple values in a single variable.
 // https://www.w3schools.com/js/js_arrays.asp
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
@@ -98,7 +100,7 @@ describe('arrays', () => {
     // expect(mergeArr.length).toBe(6)
   })
 
-  it.skip('can join an array into a string', () => {
+  it.skip('can join an array into a string (arr.join() method)', () => {
     // read documentation on array.join method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
     // join will combine each item in an array into
     // join method accepts 1 argument that will be the "glue" between each array item
@@ -109,10 +111,13 @@ describe('arrays', () => {
     // expect().toBe('quick, brown, fox, jumps, over, the, lazy, dog')
   })
 
-  it.skip('can find items that match a pattern', () => {
+  // *DEMO before completing test
+  it.skip('can find items that match a pattern (arr.find() method)', () => {
     // read documentation on array.find method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
-    // find will return the first value that matches a pattern that you provide
-    // if no item matches than it will return undefined
+    // find will return the first value that matches a condition you provide it
+    // find accepts 1 argument that is a function that contains the condition
+    // if the condition returns true, the condition has been meet and will return that item
+    // if no item matches that condition than it will return undefined
 
     // const arr = [0.345, 1.49495, 0.9486, 1.3945]
 
@@ -124,17 +129,88 @@ describe('arrays', () => {
   })
   
 
-  // filter
-  // map
-  // reduce
-  
-  // some
-  // every
+  // *note: filter, map, and reduce are heavily used in most programming applications
+  // *DEMO before completing test
+  it.skip('can filter (arr.filter() method)', () => {
+    // read documentation on array.filter method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+    // filter will return a new array with items that only match a given condition
+    // filter accepts 1 argument that is a function that contains the condition
+    // if the condition returns true that item will remain in the new array
+    // if the condition returns false that item will be removed from the new array
 
-  // Homework
+    // const arr1 = [1, 2, 3, 4, 5]
+
+    // use the filter method to only return numbers less than or equal to 3
+    // expect().toEqual([1, 2, 3])
+
+    // use the filter method to only return numbers greater than or equal to 3
+    // expect().toEqual([3, 4, 5])
+
+    // use filter to have an array that only has apples
+    const arr2 = ['apple', 'orange', 'apple', 'orange', 'apple', 'orange', 'apple']
+    
+    expect(arr2.every(item => item === 'apple')).toBe(true)
+  })
+
+  // *DEMO before completing test
+  it.skip('can map values (arr.map() method)', () => {
+    // read documentation on array.map method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+    // map can apply modifications to each item in an array
+    // map will not modify the original array but return a new array with the modified items
+    // map accepts 1 argument that is a function. this function will run for every item in the array
+    // the return value of the function will be the new modified value in the new array 
+
+    // const arr1 = [1, 2, 3, 4]
+
+    // use map to multiply 10 to every item in the arr1 array
+    // expect().toEqual([10, 20, 30, 40])
+
+    // use map to uppercase all the values in arr2
+    // hint: we've done this before in string.spec.ts // https://www.w3schools.com/jsref/jsref_touppercase.asp
+    // const arr2 = ['jim', 'sarah', 'fred', 'pete']
+    // expect().toEqual(['JIM', 'SARAH', 'FRED', 'PETE'])
+  })
+
+
+  // *DEMO before completing test
+  it('can chain filter and map methods to to modify an array', () => {
+    // any array method that returns an array can be chained with another 
+    // method to do multiple modifications to the items in the array
+    // in fact this is 1 of bases for function programming
+
+    // const arr1 = ['reginald', 'duke', 'bernard', 'franco', 'james']
+
+    // There's a royal party happening and all the lords and ladies of the land have been invited.
+    // Each person that arrives must be verified and announced.
+    // The first group to arrive is a group of gentlemen.
+    //
+    // chain filter and map methods accomplish the follows rules
+    // 1. duke has has lied about his status and is just a peasant poop smith. He must be removed from the party
+    // 2. since we are announcing the gentlemen each person name needs to be uppercase
+    // 3. before each name we need to address the gentlemen as "Sir" followed by their name
+
+    // expect().toEqual(['Sir REGINALD', 'Sir BERNARD', 'Sir FRANCO', 'Sir JAMES'])
+  })
+  // chaining
+  
+  /* =============== */
+  /*     Homework    */
+  /* =============== */
+  
   // explain the difference between array.slice() and array.splice() method
   // Why would you use one over the other? 
   //
   // explain the difference between array.find() and array.findIndex method
   // Why would you use one over the other? 
+  
+  // Creat a test for the following methods
+  // array.reverse // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
+  // array.sort    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+  // array.some    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some
+  // array.every   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
+
+  // Extra Credit 
+  // array.reduce  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+  // this can be a little complex if you are having a hard time we can address this in the advanced section later
+
 });

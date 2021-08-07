@@ -1,5 +1,6 @@
 
 describe('advance concepts', () => {
+  test.todo('array.reduce')
   test.todo('block {} scope')
   test.todo('flat map')
   test.todo('context and the "this" keyword')
