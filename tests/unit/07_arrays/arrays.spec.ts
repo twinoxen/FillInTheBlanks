@@ -173,7 +173,7 @@ describe('arrays', () => {
 
 
   // *DEMO before completing test
-  it('can chain filter and map methods to to modify an array', () => {
+  it.skip('can chain filter and map methods to to modify an array', () => {
     // any array method that returns an array can be chained with another 
     // method to do multiple modifications to the items in the array
     // in fact this is 1 of bases for function programming
