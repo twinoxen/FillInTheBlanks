@@ -1,5 +1,6 @@
 
 describe('advance concepts', () => {
+  test.todo('try catch')
   test.todo('array.reduce')
   test.todo('block {} scope')
   test.todo('flat map')
@@ -16,6 +17,7 @@ describe('advance concepts', () => {
   test.todo('Modulo operation')
   test.todo('truthy / falsy')
   test.todo('async await')
+  test.todo('for await...of')
   test.todo('generators')
   test.todo('web components')
   test.todo('shadow dom')
