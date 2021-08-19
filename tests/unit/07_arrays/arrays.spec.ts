@@ -224,17 +224,57 @@ describe("arrays", () => {
 
   // explain the difference between array.slice() and array.splice() method
   // Why would you use one over the other?
-  //
+
+  // - Splice modifies the array - slice does not. Splice replaces/removes existing elements and can add new elements in place. Slice returns a portion of an array determined by start/end
+  // - paramenters. If you want to reuse an array you would use slice over slice.
+
   // explain the difference between array.find() and array.findIndex method
   // Why would you use one over the other?
 
+  //  - array.find will return the VALUE of the first element that passes the test, while array.findIndex will return the POSITION in the array of a given value. If you
+  // are looking for the layout of the array, use findIndex, while find will give you the datapoint.
+
   // Creat a test for the following methods
   // array.reverse // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
+
+  it("can reverse an array (arr.reverse() method)", () => {
+    const arr1 = ["PETE", "FRED", "SARAH", "JIM"];
+    const arr1reverse = arr1.reverse();
+    expect(arr1reverse).toEqual(["JIM", "SARAH", "FRED", "PETE"]);
+  });
+
   // array.sort    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+
+  it("can sort an array (arr.sort() method)", () => {
+    const arr1 = [1, 40, 42, 69, 420, 3];
+    const arr1sort = arr1.sort();
+    expect(arr1sort).toEqual([1, 3, 40, 42, 420, 69]);
+  });
   // array.some    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some
+
+  it("can test for at least one element in an array will pass a test(arr.some() method))", () => {
+    const arr1 = [1, 2, 3, 4, 5];
+
+    expect(arr1.some((item) => item === 1)).toEqual(true);
+  });
+
+  // I want to look at more examples of this because I am not sure I fully understand line 256 - jf
+
   // array.every   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
+  it("can test whether all elements in a given array pass the test(arr.every() metohod))", () => {
+    const arr1 = [1, 2, 3];
+
+    expect(arr1.every((item) => item < 4)).toEqual(true);
+  });
 
   // Extra Credit
   // array.reduce  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
   // this can be a little complex if you are having a hard time we can address this in the advanced section later
+
+  // total sum of all numbers
+
+  it("can give the total sum of all numbers in an array(arry.reduce() method))", () => {
+    const arr1 = [20, 22];
+    expect(arr1.reduce((acc, curr) => acc + curr)).toEqual(42);
+  });
 });
