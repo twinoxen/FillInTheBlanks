@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "parcel index.html",
     "lint": "eslint --fix",
+    "clear": "jest --clearCache",
     "test": "jest --watch"
+
   },
   "author": "",
   "license": "ISC",
